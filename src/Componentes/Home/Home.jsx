@@ -1,120 +1,148 @@
-// src/pages/Home.jsx
-import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "../Footer/Footer";
-
+// src/components/Home.jsx
+import React from 'react';
 
 export default function Home() {
   return (
-    <div className="mt-5 pt-4">
-      {/* Hero Section */}
-      <section className="bg-light text-dark py-5">
-        <div className="container text-center">
-          <h1 className="display-4 fw-bold">Descubra seu Estilo</h1>
-          <p className="lead">
-            Roupas modernas e confortáveis para todas as ocasiões.
-          </p>
-          <a href="#produtos" className="btn btn-primary btn-lg">
-            Ver Coleção
-          </a>
-        </div>
-      </section>
-
+    <div>
       {/* Categorias */}
-      <section className="py-5">
+      <div className="container my-5">
+        <h2 className="text-center mb-4">Categorias em Destaque</h2>
+        <div className="row">
+          <div className="col-md-4 mb-4">
+            <div className="card h-100">
+              <img 
+                src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=400&q=80"
+                className="card-img-top"
+                alt="Roupas femininas elegantes e modernas"
+                style={{ height: '250px', objectFit: 'cover' }}
+              />
+              <div className="card-body text-center">
+                <h5 className="card-title">Feminino</h5>
+                <p className="card-text">Looks perfeitos para qualquer ocasião</p>
+                <a href="#" className="btn btn-outline-dark">Ver Coleção</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 mb-4">
+            <div className="card h-100">
+              <img 
+                src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=400&q=80"
+                className="card-img-top"
+                alt="Roupas masculinas casuais e sofisticadas"
+                style={{ height: '250px', objectFit: 'cover' }}
+              />
+              <div className="card-body text-center">
+                <h5 className="card-title">Masculino</h5>
+                <p className="card-text">Estilo e conforto para o dia a dia</p>
+                <a href="#" className="btn btn-outline-dark">Ver Coleção</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 mb-4">
+            <div className="card h-100">
+              <img 
+                src="https://images.unsplash.com/photo-1519238263530-99bdd11dc6fc?auto=format&fit=crop&w=400&q=80"
+                className="card-img-top"
+                alt="Roupas infantis coloridas e divertidas"
+                style={{ height: '250px', objectFit: 'cover' }}
+              />
+              <div className="card-body text-center">
+                <h5 className="card-title">Infantil</h5>
+                <p className="card-text">Roupas fofas para os pequenos</p>
+                <a href="#" className="btn btn-outline-dark">Ver Coleção</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Destaques da Temporada */}
+      <div className="bg-light py-5">
         <div className="container">
-          <h2 className="text-center mb-4">Categorias</h2>
-          <div className="row g-4">
-            <div className="col-md-4">
+          <h2 className="text-center mb-4">Destaques da Temporada</h2>
+          <div className="row">
+            <div className="col-md-3 col-6 mb-4">
               <div className="card">
-                <img
-                  src="https://via.placeholder.com/400x250?text=Feminino"
+                <img 
+                  src="https://images.unsplash.com/photo-1583744946564-52abfa9fd965?auto=format&fit=crop&w=300&q=80"
                   className="card-img-top"
-                  alt="Feminino"
+                  alt="Vestido de verão floral com estampa tropical"
+                  style={{ height: '300px', objectFit: 'cover' }}
                 />
-                <div className="card-body text-center">
-                  <h5 className="card-title">Feminino</h5>
-                  <a href="#" className="btn btn-outline-primary">
-                    Ver mais
-                  </a>
+                <div className="card-body">
+                  <h5 className="card-title">Vestido Floral</h5>
+                  <p className="card-text">R$ 129,90</p>
                 </div>
               </div>
             </div>
-
-            <div className="col-md-4">
+            <div className="col-md-3 col-6 mb-4">
               <div className="card">
-                <img
-                  src="https://via.placeholder.com/400x250?text=Masculino"
+                <img 
+                  src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=300&q=80"
                   className="card-img-top"
-                  alt="Masculino"
+                  alt="Jaqueta jeans clara com corte moderno"
+                  style={{ height: '300px', objectFit: 'cover' }}
                 />
-                <div className="card-body text-center">
-                  <h5 className="card-title">Masculino</h5>
-                  <a href="#" className="btn btn-outline-primary">
-                    Ver mais
-                  </a>
+                <div className="card-body">
+                  <h5 className="card-title">Jaqueta Jeans</h5>
+                  <p className="card-text">R$ 199,90</p>
                 </div>
               </div>
             </div>
-
-            <div className="col-md-4">
+            <div className="col-md-3 col-6 mb-4">
               <div className="card">
-                <img
-                  src="https://via.placeholder.com/400x250?text=Promoções"
+                <img 
+                  src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?auto=format&fit=crop&w=300&q=80"
                   className="card-img-top"
-                  alt="Promoções"
+                  alt="Camiseta básica de algodão em diversas cores"
+                  style={{ height: '300px', objectFit: 'cover' }}
                 />
-                <div className="card-body text-center">
-                  <h5 className="card-title">Promoções</h5>
-                  <a href="#" className="btn btn-outline-primary">
-                    Ver mais
-                  </a>
+                <div className="card-body">
+                  <h5 className="card-title">Camiseta Básica</h5>
+                  <p className="card-text">R$ 49,90</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3 col-6 mb-4">
+              <div className="card">
+                <img 
+                  src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=300&q=80"
+                  className="card-img-top"
+                  alt="Calça jeans skinny com lavagem moderna"
+                  style={{ height: '300px', objectFit: 'cover' }}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">Calça Jeans</h5>
+                  <p className="card-text">R$ 159,90</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Produtos em destaque */}
-      <section id="produtos" className="py-5 bg-light">
+      {/* Newsletter */}
+      <div className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="container">
-          <h2 className="text-center mb-4">Produtos em Destaque</h2>
-          <div className="row g-4">
-            {[1, 2, 3, 4].map((item) => (
-              <div className="col-md-3" key={item}>
-                <div className="card h-100">
-                  <img
-                    src={`./images/feminino.jpg${item}`}
-                    className="card-img-top"
-                    alt={`Produto ${item}`}
-                  />
-                  <div className="card-body text-center">
-                    <h5 className="card-title">Produto {item}</h5>
-                    <p className="card-text text-muted">R$ {(item * 59).toFixed(2)}</p>
-                    <a href="#" className="btn btn-primary">
-                      Comprar
-                    </a>
-                  </div>
-                </div>
+          <div className="row justify-content-center">
+            <div className="col-md-6 text-center">
+              <h2>Fique por dentro das novidades</h2>
+              <p className="mb-4">Cadastre-se para receber nossas promoções e lançamentos</p>
+              <div className="input-group mb-3">
+                <input 
+                  type="email" 
+                  className="form-control" 
+                  placeholder="Seu melhor email" 
+                  aria-label="Seu email" 
+                />
+                <button className="btn btn-dark" type="button">
+                  Inscrever
+                </button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* Sobre a loja */}
-      <section className="py-5">
-        <div className="container text-center">
-          <h2>Sobre a ModaShop</h2>
-          <p className="lead mt-3">
-            Somos apaixonados por moda e buscamos trazer sempre as melhores
-            tendências, com qualidade e preço justo para você se vestir bem em
-            qualquer ocasião.
-          </p>
-        </div>
-      </section>
-
-      <Footer></Footer>
+      </div>
     </div>
   );
 }

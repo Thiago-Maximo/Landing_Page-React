@@ -4,20 +4,24 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './Componentes/NavBar/NavBar'
 import Home from './Componentes/Home/Home'
+import Banner from './Componentes/Banner/Banner'
 import Footer from './Componentes/Footer/Footer'
-import Carousel from './Componentes/Banner/Banner'
 
 function App() {
 
   return (
     <>
       {/* Barra de Navegação */}
-      <header>
+      <header className='Barra-De-Navegacao'>
         <Navbar />
       </header>
 
+      <section className='Banner'>
+        <Banner></Banner>
+      </section>
+
       {/* Sessão de Boas Vindas */}
-      <section>
+      <section className='Boas-Vindas'>
         <div className="pt-5">
           <div className="container mt-5">
             <h1 className="text-center mt-5">Bem-vindo à ModaShop!</h1>
@@ -27,12 +31,10 @@ function App() {
       </section>
 
       {/* Pagina Inicial */}
-      <section>
+      <section className='pagina_inicial'>
         <Home></Home>
       </section>
-
-
-
+      <Footer/>
     </>
   )
 }

@@ -1,77 +1,26 @@
-// src/components/Carousel.jsx
-export default function Carousel() {
+// src/components/Banner.jsx
+import React from 'react';
+
+export default function Banner() {
   return (
-    <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
-      {/* Indicadores */}
-      <div className="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
+    <div
+      className="d-flex justify-content-center align-items-center text-white"
+      style={{
+        height: '300px',
+        backgroundImage:
+          'url(https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1350&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        textShadow: '0 0 10px rgba(0,0,0,0.7)',
+      }}
+    >
+      <div className="text-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.4)', borderRadius: '8px' }}>
+        <h1 className="display-4 fw-bold">Moda que Inspira</h1>
+        <p className="lead mb-4">Descubra as últimas tendências em roupas</p>
+        <button type="button" className="btn btn-pink btn-lg" style={{ backgroundColor: '#ff4081', border: 'none' }}>
+          Compre Agora
+        </button>
       </div>
-
-      {/* Slides */}
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src="/images/banner1.jpg" className="d-block w-100" alt="Banner 1" />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Moda Feminina</h5>
-            <p>Roupas estilosas e confortáveis</p>
-          </div>
-        </div>
-
-        <div className="carousel-item">
-          <img src="/images/banner2.jpg" className="d-block w-100" alt="Banner 2" />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Moda Masculina</h5>
-            <p>Novas tendências para todos os estilos</p>
-          </div>
-        </div>
-
-        <div className="carousel-item">
-          <img src="/images/banner3.jpg" className="d-block w-100" alt="Banner 3" />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Promoções Especiais</h5>
-            <p>Ofertas imperdíveis em roupas selecionadas</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Controles */}
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#homeCarousel"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Anterior</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#homeCarousel"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Próximo</span>
-      </button>
     </div>
   );
 }
