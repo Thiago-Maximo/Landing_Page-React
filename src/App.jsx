@@ -24,15 +24,6 @@ function App() {
           path="/"
           element={
             <>
-              <section className='Boas-Vindas'>
-                <div className="pt-5">
-                  <div className="container mt-5">
-                    <h1 className="text-center mt-5">Bem-vindo à ModaShop!</h1>
-                    <p className="text-center text-muted">Sua loja online de roupas.</p>
-                  </div>
-                </div>
-              </section>
-
               <section className='pagina_inicial'>
                 <Home />
               </section>
