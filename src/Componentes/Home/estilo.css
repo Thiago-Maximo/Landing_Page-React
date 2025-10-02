@@ -1,0 +1,84 @@
+/* Estilos para Cards no Home (mesmos do masculino.jsx) */
+.card-item {
+  height: auto; /* Flexível */
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Centraliza horizontalmente */
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-item img {
+  max-width: 100%;
+  max-height: 200px; /* Tamanho controlado */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Encaixa sem cortar */
+  object-position: center center;
+  display: block;
+  margin: 0 auto 15px auto; /* Centraliza e espaço abaixo */
+  border-radius: 8px;
+}
+
+.card-item .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center; /* Centraliza textos */
+  width: 100%;
+}
+
+.card-item .card-title {
+  color: #333; /* Preto */
+  font-size: 1.25rem;
+  margin: 10px 0 5px 0;
+  flex-shrink: 0;
+}
+
+.card-item .card-text {
+  color: #666;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+  flex-grow: 1;
+}
+
+.card-item .card-text.fw-bold {
+  color: #000; /* Preto destacado para preços */
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.card-item .btn,
+.card-item a.btn {
+  width: 100%; /* Largura total */
+  flex-shrink: 0;
+  transition: background-color 0.3s;
+}
+
+.card-item .btn:hover,
+.card-item a.btn:hover {
+  background-color: #0056b3 !important;
+  color: white !important;
+}
+
+/* Responsividade para Cards no Home */
+@media (max-width: 768px) {
+  .card-item {
+    padding: 10px;
+  }
+
+  .card-item img {
+    max-height: 150px;
+  }
+}

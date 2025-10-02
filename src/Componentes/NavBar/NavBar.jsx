@@ -1,12 +1,13 @@
 // src/components/Navbar.jsx
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#343a40' }}>
       <div className="container">
         <a className="navbar-brand fw-bold" href="#">
-          Sua Loja
+          <Link className="navbar-brand fw-bold" to="/Home">Moda Shop</Link>
         </a>
         <button
           className="navbar-toggler"
@@ -22,9 +23,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
+              <Link className="nav-link" to="/Home">Home</Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -32,9 +31,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Masculino
-              </a>
+              <Link className="nav-link" to="/masculino">Masculino</Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
