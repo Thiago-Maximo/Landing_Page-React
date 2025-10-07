@@ -1,46 +1,83 @@
-/* Navbar - Garantir Colapso Funcional */
+/* ===== Navbar - Colapso Funcional ===== */
 .navbar-collapse {
-  transition: all 0.35s ease !important; /* Animação suave */
+  transition: max-height 0.35s ease, opacity 0.35s ease !important;
+  overflow: hidden;
+  max-height: 0;       /* Inicialmente fechado */
+  opacity: 0;
 }
 
 .navbar-collapse.show {
   display: block !important; /* Garante visibilidade quando aberto */
+  max-height: 500px;         /* Ajuste conforme quantidade de links */
+  opacity: 1;
 }
 
-.navbar-collapse:not(.show) {
-  display: none !important; /* Esconde quando fechado */
-}
-
-/* Fundo no menu mobile expandido */
+/* ===== Menu Mobile Expandido ===== */
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    background-color: #343a40 !important; /* Fundo escuro para menu aberto */
+    background-color: #343a40 !important; /* Fundo escuro */
     margin-top: 10px;
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   
+  .navbar-nav {
+    flex-direction: column;
+  }
+
   .navbar-nav .nav-link {
     color: #fff !important;
     padding: 10px 15px !important;
-    border-bottom: 1px solid rgba(255,255,255,0.1); /* Linha separadora sutil */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
   }
   
   .navbar-nav .nav-link:hover {
-    color: #ff4081 !important; /* Rosa hover */
+    color: #ff4081 !important;
     background-color: rgba(255,255,255,0.1) !important;
   }
 }
 
-/* Desktop - Menu horizontal sempre visível */
+/* ===== Desktop - Menu horizontal sempre visível ===== */
 @media (min-width: 992px) {
   .navbar-collapse {
-    display: flex !important; /* Sempre visível em lg+ */
+    display: flex !important;   /* Sempre visível */
+    max-height: none !important; /* Remove limite de altura */
+    opacity: 1 !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row;        /* Links em linha */
+  }
+
+  .navbar-nav .nav-link {
+    color: #fff !important;     /* Cor corrigida para navbar-dark (texto claro) */
+    border-bottom: none !important;
+    padding: 0 15px !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #ff4081 !important;  /* Rosa hover */
+    background-color: transparent !important;
   }
 }
 
-/* Evita conflitos no DevTools/Resize */
+/* ===== Ajustes Gerais ===== */
 .navbar-toggler:focus {
   box-shadow: none !important;
+}
+
+/* Garante que o collapse não tenha altura inline residual */
+.navbar-collapse[style*="height"] {
+  height: auto !important;
+}
+
+/* Estilo para o toggler collapsed (Bootstrap padrão) */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }

@@ -6,8 +6,10 @@ import Navbar from './Componentes/NavBar/NavBar';
 import Home from './Componentes/Home/Home';
 import Banner from './Componentes/Banner/Banner';
 import Footer from './Componentes/Footer/Footer';
-import MensClothing from "./Componentes/Colecao/masculino.jsx";
+import MensClothing from "./Componentes/Paginas/ColecaoMasculina/masculino.jsx";
 import Aviso from "./Componentes/Aviso/Aviso.jsx";
+import Feminino from "./Componentes/Paginas/ColecaoFeminina/feminino.jsx";
+import Infantil from "./Componentes/Paginas/ColecaoInfantil/infantil.jsx";
 // depois você cria Feminino.jsx também, se quiser
 
 function App() {
@@ -40,8 +42,12 @@ function App() {
         {/* Página Aviso (acesso direto via link) */}
         <Route path="/Aviso" element={<Aviso />} />
 
+        <Route path="/ColecaoFeminina" element={<Feminino />} />
+
+        <Route path="/ColecaoInfantil" element={<Infantil />} />
+
         {/* Exemplo para feminino (quando você criar a página Feminino.jsx) */}
-        {/* <Route path="/feminino" element={<Feminino />} /> */}
+       
         {/* <Route path="/infantil" element={<Infantil />} /> */}
       </Routes>
 
